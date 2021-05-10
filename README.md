@@ -1,4 +1,4 @@
-# @turph/database
+# Turph Database
 
 > Simple Database using MongoDB
 
@@ -10,10 +10,9 @@
 new database(mongo url, options)
 ```
 
-Option Types:
-  name » Name of the collection that the data will be stored in
+__Parameter__
 
-__Example__
+#### Example
 
 ```js
   const turphDatabase = require('./database.js'); // Note: since this is not a NPM Package you need to make a new file for this called "database.js" if you wish to use this line of code
