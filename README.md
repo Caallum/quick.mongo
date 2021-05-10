@@ -113,6 +113,7 @@ database.all()
 
 Parameter | Type | Optional | Description
 --- | --- | --- | ---
+ | | | |
 
 #### Example
 
