@@ -131,6 +131,7 @@ database.delete(key)
 
 Parameter | Type | Optional | Description
 --- | --- | --- | ---
+Key | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖ | The key of the value you wish to delete
 
 #### Example
 
