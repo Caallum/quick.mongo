@@ -86,6 +86,8 @@ __Example__
 await database.find('foo');
 ```
 
+Returns <[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>
+
 ### database.all()
 
 *Promise*
@@ -100,6 +102,8 @@ __Example__
 await database.all()
 ```
 
+Returns <[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>
+
 ### database.delete()
 
 *Promise*
@@ -113,3 +117,5 @@ __Example__
 ```js
 await database.delete('foo');
 ```
+
+Returns <[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
