@@ -23,3 +23,87 @@ __Example__
   .on('error', err => console.log(err))
   .on('connected', info => console.log(info));
 ```
+
+### database.set()
+
+*Promise*
+
+```js
+database.set(key, value)
+```
+
+__Example__
+
+```js
+await database.set('foo', 'fee');
+```
+
+### database.get()
+
+*Promise*
+
+```js
+await database.get(key)
+```
+ 
+__Example__
+
+```js
+await database.get('foo'); // fee
+```
+
+### database.search()
+
+*Promise*
+
+```js
+database.search(query)
+```
+
+__Example__
+
+```js
+await database.search('foo');
+```
+
+### database.find()
+
+*Promise*
+
+```js
+database.find(query)
+```
+
+__Example__
+
+```js
+await database.find('foo');
+```
+
+### database.all()
+
+*Promise*
+
+```js
+database.all()
+```
+
+__Example__
+
+```js
+await database.all()
+```
+
+### database.delete()
+
+*Promise*
+
+```js
+database.delete(key)
+```
+
+__Example__
+
+```js
+await database.delete('foo');
+```
