@@ -24,9 +24,10 @@ __Example__
   .on('connected', info => console.log(info));
 ```
 
+Returns 
+
 ### database.set()
 
-*Promise*
 
 ```js
 database.set(key, value)
@@ -38,7 +39,7 @@ __Example__
 await database.set('foo', 'fee');
 ```
 
-Returns <[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
+Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
 
 ### database.get()
 
@@ -54,11 +55,10 @@ __Example__
 await database.get('foo'); // fee
 ```
 
-Returns <[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>
+Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>
 
 ### database.search()
 
-*Promise*
 
 ```js
 database.search(query)
@@ -70,11 +70,10 @@ __Example__
 await database.search('foo');
 ```
 
-Returns <[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>
+Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>
 
 ### database.find()
 
-*Promise*
 
 ```js
 database.find(query)
@@ -86,11 +85,10 @@ __Example__
 await database.find('foo');
 ```
 
-Returns <[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>
+Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>
 
 ### database.all()
 
-*Promise*
 
 ```js
 database.all()
@@ -102,11 +100,10 @@ __Example__
 await database.all()
 ```
 
-Returns <[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>
+Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>
 
 ### database.delete()
 
-*Promise*
 
 ```js
 database.delete(key)
@@ -118,4 +115,4 @@ __Example__
 await database.delete('foo');
 ```
 
-Returns <[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
+Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
