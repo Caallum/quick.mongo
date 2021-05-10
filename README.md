@@ -27,8 +27,6 @@ Options.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
   .on('connected', info => console.log(info));
 ```
 
-Returns 
-
 ### database.set()
 
 
@@ -36,7 +34,12 @@ Returns
 database.set(key, value)
 ```
 
-__Example__
+Parameter | Type | Optional | Description
+--- | --- | --- | ---
+Key | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖ | The key of the value
+Value | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) / [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) | ✖ | The value of the key you wish to set
+
+#### Example
 
 ```js
 await database.set('foo', 'fee');
@@ -46,7 +49,6 @@ Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### database.get()
 
-*Promise*
 
 ```js
 await database.get(key)
