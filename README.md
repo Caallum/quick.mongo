@@ -53,8 +53,12 @@ Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ```js
 await database.get(key)
 ```
+
+Parameter | Type | Optional | Description
+--- | --- | --- | ---
+key | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖ | The key of that vakue you wish to find
  
-__Example__
+#### Example
 
 ```js
 await database.get('foo'); // fee
@@ -69,7 +73,11 @@ Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 database.search(query)
 ```
 
-__Example__
+Parameter | Type | Optional | Description
+--- | --- | --- | ---
+query | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖ | The term you wish to search for
+
+#### Example
 
 ```js
 await database.search('foo');
@@ -84,7 +92,11 @@ Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 database.find(query)
 ```
 
-__Example__
+Parameter | Type | Optional | Description
+--- | --- | --- | ---
+query | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖ | The term you wish to search for
+
+#### Example
 
 ```js
 await database.find('foo');
@@ -99,7 +111,10 @@ Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 database.all()
 ```
 
-__Example__
+Parameter | Type | Optional | Description
+--- | --- | --- | ---
+
+#### Example
 
 ```js
 await database.all()
@@ -114,7 +129,10 @@ Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 database.delete(key)
 ```
 
-__Example__
+Parameter | Type | Optional | Description
+--- | --- | --- | ---
+
+#### Example
 
 ```js
 await database.delete('foo');
