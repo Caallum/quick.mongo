@@ -1,1 +1,17 @@
-
+{
+  "name": "@turph/database",
+  "version": "1.0.0",
+  "description": "A MongoDB Extention package with easy to learn functions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [
+    "mongo",
+    "database",
+    "turph",
+    "mongodb"
+  ],
+  "author": "turph",
+  "license": "ISC"
+}
