@@ -38,6 +38,8 @@ __Example__
 await database.set('foo', 'fee');
 ```
 
+Returns <[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
+
 ### database.get()
 
 *Promise*
@@ -52,6 +54,8 @@ __Example__
 await database.get('foo'); // fee
 ```
 
+Returns <[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>
+
 ### database.search()
 
 *Promise*
@@ -65,6 +69,8 @@ __Example__
 ```js
 await database.search('foo');
 ```
+
+Returns <[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>
 
 ### database.find()
 
