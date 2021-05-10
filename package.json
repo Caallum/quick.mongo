@@ -13,5 +13,10 @@
     "mongodb"
   ],
   "author": "turph",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "mongoose": "^5.12.8",
+    "pify": "^5.0.0"
+  }
 }
