@@ -114,7 +114,6 @@ class database extends EventEmitter {
 	  
 	  let map = [];
 	  
-	  
 	  await documents.forEach(doc => {
 	    if(doc.key.toLowerCase().includes(key.toLowerCase())) {
         map.push({ key: doc.key, value: doc.value })
