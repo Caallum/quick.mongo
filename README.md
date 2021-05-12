@@ -1,8 +1,9 @@
-# Note: *this is the development branch for Turph Database, there is going to be bugs. Please record all bugs and issue in the issues tab for them to be fixed*
+# Note: *this is the development branch for quick.mongo, there is going to be bugs. Please record all bugs and issue in the issues tab for them to be fixed*
 
-# Turph Database
+# quick.mongo
 
 > Simple Database using MongoDB
+> The name is a copy of `quick.db`, this uses the Mongo Atlas Database to store data though
 
 ## Documentation
 
@@ -21,7 +22,7 @@ options.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 #### Example
 
 ```js
-  const turphDatabase = require('./database.js'); // Note: since this is not a NPM Package you need to make a new file for this called "database.js" if you wish to use this line of code
+  const quickMongo = require('./database.js'); // Note: since this is not a NPM Package you need to make a new file for this called "database.js" if you wish to use this line of code
   
   const database = new turphDatabase('{ INSERT MONGO URL HERE }', { name: 'database' });
   db
