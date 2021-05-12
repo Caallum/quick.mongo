@@ -1,6 +1,6 @@
 {
   "name": "@turph/database",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A MongoDB Extention package with easy to learn functions",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,10 @@
   ],
   "author": "turph",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "mongoose": "^5.12.8"
+  },
   "devDependencies": {
-    "mongoose": "^5.12.8",
     "pify": "^5.0.0"
   }
 }
