@@ -143,3 +143,21 @@ await database.delete('foo');
 ```
 
 Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
+
+### database.clear()
+
+```js
+database.clear(key)
+```
+
+Parameter | Type | Optional | Description
+--- | --- | --- | ---
+Key | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖ | The key of the value you wish to clear from your database. Note: this will delete ALL matches so perform at your own risk
+
+#### Example
+
+```js
+await database.clear('foo');
+```
+
+Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
