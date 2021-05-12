@@ -79,7 +79,7 @@ class database extends EventEmitter {
 			return Promise.resolve(false);
 		}
 
-		return this.mongo.deleteOne({ key }).then(() => return true );
+		return this.mongo.deleteOne({ key }).then(() => { return true });
 	}
 
 	async search(key) {
