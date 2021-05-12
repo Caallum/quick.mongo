@@ -1,3 +1,5 @@
+# Note: *this is the development branch for Turph Database, there is going to be bugs. Please record all bugs and issue in the issues tab for them to be fixed*
+
 # Turph Database
 
 > Simple Database using MongoDB
