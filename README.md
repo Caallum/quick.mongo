@@ -20,7 +20,7 @@ Options.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 #### Example
 
 ```js
-  const turphDatabase = require('./database.js'); // Note: since this is not a NPM Package you need to make a new file for this called "database.js" if you wish to use this line of code
+  const quickMongo = require('./database.js'); // Note: since this is not a NPM Package you need to make a new file for this called "database.js" if you wish to use this line of code
   
   const database = new turphDatabase('{ INSERT MONGO URL HERE }', { name: 'database' });
   db
