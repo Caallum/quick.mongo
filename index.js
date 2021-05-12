@@ -70,7 +70,8 @@ class database extends EventEmitter {
 	}
 
 	async set(key, value) {
-		return this.mongo.replaceOne({ key }, { key, value }, { upsert: true });
+	  return this.mongo.replaceOne({ key }, { key, value }, { upsert: true })
+	  .then(() => { return true })
 	}
 
 	async delete(key) {
@@ -78,7 +79,7 @@ class database extends EventEmitter {
 			return Promise.resolve(false);
 		}
 
-		return this.mongo.deleteOne({ key }).then(obj => obj.n > 0);
+		return this.mongo.deleteOne({ key }).then(() => return true );
 	}
 
 	async search(key) {
@@ -113,6 +114,7 @@ class database extends EventEmitter {
 	  });
 	  
 	  let map = [];
+	  
 	  
 	  await documents.forEach(doc => {
 	    if(doc.key.toLowerCase().includes(key.toLowerCase())) {
