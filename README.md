@@ -1,6 +1,7 @@
-# Turph Database
+# quick.mongo
 
 > Simple Database using MongoDB
+> The name is a copy of `quick.db`, this uses the Mongo Atlas Database to store data though
 
 ## Documentation
 
