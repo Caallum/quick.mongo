@@ -140,6 +140,17 @@ class database extends EventEmitter {
 	  
 	  return undefined;
 	}
+	
+	async clear(key) {
+	  if(typeof key !== 'string') {
+	    return Promise.resolve(false);
+	  }
+	  
+	  return this.mongo.deleteMany({ key: new RegExp(`${key}`, 'i') })
+	    .then(() => {
+	      return true;
+	    })
+	}
 }
 
 module.exports = database;

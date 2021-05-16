@@ -14,8 +14,8 @@ new database(mongo url, options)
 Parameter | Type | Optional | Description
 --- | --- | --- | ---
 Mongo URL | [URL](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL) | ✖ | The URL given to you by the MongoDB Atlas Connection
-Options | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) | null | null
-Options.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖ | The name of the collection you want to create
+options | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) | null | null
+options.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖ | The name of the collection you want to create
 
 #### Example
 
@@ -27,6 +27,8 @@ Options.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
   .on('error', err => console.log(err))
   .on('connected', info => console.log(info));
 ```
+
+Constructor
 
 ### database.set()
 
@@ -139,6 +141,24 @@ Key | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 
 ```js
 await database.delete('foo');
+```
+
+Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
+
+### database.clear()
+
+```js
+database.clear(key)
+```
+
+Parameter | Type | Optional | Description
+--- | --- | --- | ---
+Key | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖ | The key of the value you wish to clear from your database. Note: this will delete ALL matches so perform at your own risk
+
+#### Example
+
+```js
+await database.clear('foo');
 ```
 
 Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
