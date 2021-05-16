@@ -1,5 +1,3 @@
-# Note: *this is the development branch for quick.mongo, there is going to be bugs. Please record all bugs and issue in the issues tab for them to be fixed*
-
 # quick.mongo
 
 > Simple Database using MongoDB
