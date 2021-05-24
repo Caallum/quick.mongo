@@ -40,7 +40,7 @@ class database extends EventEmitter {
 			}
 		);
 
-		this.mongo = ['replaceOne', 'findOne', 'deleteOne', 'find'].reduce(
+		this.mongo = ['replaceOne', 'findOne', 'deleteOne', 'find', 'deleteMany'].reduce(
 			(obj, method) => {
 				obj[method] = pify(this.collection[method].bind(this.collection));
 				return obj;
