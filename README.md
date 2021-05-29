@@ -20,7 +20,7 @@ options.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 #### Example
 
 ```js
-  const quickMongo = require('@turph/mongodatabase');
+  const quickMongo = require('@turph/quickmongo');
   
   const database = new quickMongo('{ INSERT MONGO URL HERE }', { name: 'database' });
   db
