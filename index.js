@@ -40,7 +40,7 @@ class database extends EventEmitter {
 			}
 		);
 
-		this.mongo = ['replaceOne', 'findOne', 'deleteOne', 'find'].reduce(
+		this.mongo = ['replaceOne', 'findOne', 'deleteOne', 'find', 'deleteMany'].reduce(
 			(obj, method) => {
 				obj[method] = pify(this.collection[method].bind(this.collection));
 				return obj;
@@ -87,20 +87,12 @@ class database extends EventEmitter {
 			return Promise.resolve(false);
 		}
 	
-	  let documents = await this.mongo.find({}, function(err, data) {
+	  let documents = await this.mongo.find({ key: new Regex(`${key}`, 'i') }, function(err, data) {
 	    if(err) return undefined;
 	    if(!data) return undefined;
 	  });
 	  
-	  let map = [];
-	  
-	  
-	  await documents.forEach(doc => {
-	    if(doc.key.toLowerCase().includes(key.toLowerCase())) {
-        map.push({ key: doc.key, value: doc.value })
-	    }
-	  });
-	  return map;
+	  return documents;
 	}
 	
 	async find(key) {
@@ -150,6 +142,30 @@ class database extends EventEmitter {
 	    .then(() => {
 	      return true;
 	    })
+	}
+	
+	async push(key, values) {
+	  if(typeof key !== 'string') {
+	    return Promise.resolve(false);
+	  }
+	  
+	  if(typeof values !== 'array') {
+	    return Promise.resolve(false);
+	  }
+	  
+	  let existing = await this.get(key);
+	  
+	  if(existing) {
+	    if(typeof existing !== 'array') {
+	      return Promise.resolve(false);
+	    }
+	    
+	    let total = existing.push(values);
+	    
+	    return await this.set(key, total);
+	  };
+	  
+	  return await this.set(key, values);
 	}
 }
 
