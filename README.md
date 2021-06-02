@@ -162,3 +162,30 @@ await database.clear('foo');
 ```
 
 Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
+
+### database.push()
+
+```js
+database.push(key, values)
+```
+
+Parameter | Type | Optional | Description
+--- | --- | --- | ---
+Key | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | ✖️ | The key you want to push values into
+Values | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) | ✖️ | The values you want to push into
+
+#### Example
+
+```js
+await database.push('foo', ['fee', 'foo'])
+```
+
+Returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>
+
+## Extra Information
+
+This will not be updated frequently and will most likely only be updated for bug fixes. Extra features will not be added.
+
+## Contributors
+
+[Tur-ph](https://github.com/Tur-ph)
