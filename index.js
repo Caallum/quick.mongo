@@ -149,14 +149,14 @@ class database extends EventEmitter {
 	    return Promise.resolve(false);
 	  }
 	  
-	  if(typeof values !== 'array') {
+	  if(Array.isArray(values)) {
 	    return Promise.resolve(false);
 	  }
 	  
 	  let existing = await this.get(key);
 	  
 	  if(existing) {
-	    if(typeof existing !== 'array') {
+	    if(Array.isArray(existing)) {
 	      return Promise.resolve(false);
 	    }
 	    
