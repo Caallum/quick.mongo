@@ -1,5 +1,5 @@
 {
-  "name": "@turph/database",
+  "name": "@turph/quickmongo",
   "version": "1.0.1",
   "description": "A MongoDB Extention package with easy to learn functions",
   "main": "index.js",
