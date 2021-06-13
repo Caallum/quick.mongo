@@ -160,9 +160,9 @@ class database extends EventEmitter {
 	      return Promise.resolve(false);
 	    }
 	    
-	    let total = existing.push(values);
+	    existing.push(values);
 	    
-	    return await this.set(key, total);
+	    return await this.set(key, existing);
 	  };
 	  
 	  return await this.set(key, values);
